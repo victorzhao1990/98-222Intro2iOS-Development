@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     var nounDict: NounDictionary!
     
-    var timer: NSTimer!
+    var timer: NSTimer?
     
     // TODO: Achieve the full functionality of the timer/clock
     // The variable that used to record the start time
@@ -52,12 +52,6 @@ class ViewController: UIViewController {
         
         // concatenate minutes, seconds and milliseconds as assign it to the UILabel
         timerDisplay.text = "\(strMinutes):\(strSeconds):\(strFraction)"
-    }
-    
-    func timerFireMethod() {
-        let formatter = NSDateFormatter()
-        formatter.dateFormat = "h:mm a"
-        timerDisplay.text = formatter.stringFromDate(timer.fireDate)
     }
     
     override func viewDidLoad() {
@@ -103,7 +97,7 @@ class ViewController: UIViewController {
     }
     
     func stopTimer() {
-        timer.invalidate()
+        timer?.invalidate()
         timer == nil
     }
 }
