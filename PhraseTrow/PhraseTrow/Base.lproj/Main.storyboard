@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="PhraseThrow" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLn-ae-tyP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PhraseThrow" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLn-ae-tyP">
                                 <rect key="frame" x="83" y="47" width="155" height="30"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="26"/>
                                 <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -37,19 +37,31 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eba-4b-pyI">
+                                <rect key="frame" x="127" y="239" width="67" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="NXW-CM-kaj" secondAttribute="centerX" id="4a8-kI-O54"/>
+                            <constraint firstAttribute="centerY" secondItem="Eba-4b-pyI" secondAttribute="centerY" constant="34.5" id="76c-9m-7WI"/>
+                            <constraint firstAttribute="centerX" secondItem="DLn-ae-tyP" secondAttribute="centerX" constant="-0.5" id="9ee-K1-ixc"/>
                             <constraint firstItem="DLn-ae-tyP" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="27" id="FGp-et-qyB"/>
+                            <constraint firstAttribute="centerX" secondItem="Eba-4b-pyI" secondAttribute="centerX" id="Il1-Fy-vmv"/>
                             <constraint firstAttribute="centerX" secondItem="RoS-p6-ctt" secondAttribute="centerX" id="L99-aL-oPF"/>
                             <constraint firstAttribute="centerY" secondItem="RoS-p6-ctt" secondAttribute="centerY" constant="-222" id="WUQ-ZY-jyg"/>
+                            <constraint firstAttribute="centerY" secondItem="DLn-ae-tyP" secondAttribute="centerY" constant="222" id="bGx-Ac-bUj"/>
                             <constraint firstAttribute="centerY" secondItem="DLn-ae-tyP" secondAttribute="centerY" constant="222" id="qRM-C6-6LY"/>
                             <constraint firstAttribute="centerY" secondItem="NXW-CM-kaj" secondAttribute="centerY" constant="124.5" id="vxB-dd-6fJ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="nextWordButton" destination="RoS-p6-ctt" id="c0i-iy-Qoq"/>
                         <outlet property="nextWordLabel" destination="NXW-CM-kaj" id="tLB-QN-MpV"/>
+                        <outlet property="timerDisplay" destination="Eba-4b-pyI" id="EVZ-H3-zgO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
